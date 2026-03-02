@@ -1,0 +1,112 @@
+/* PlantCard Styles */
+.plant-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;       /* center image and details vertically */
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  margin: 20px auto;         /* center card horizontally on the page */
+  max-width: 700px;          /* wider so image + details fit nicely */
+}
+
+/* left column - fixed width */
+.plant-image {
+  flex: 0 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plant-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.plant-placeholder {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3f3;
+  color: #777;
+  border-radius: 6px;
+}
+
+/* right column - flexible */
+.plant-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;          /* keep text left-aligned beside the image on wide screens */
+}
+
+.plant-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.scientific-name {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* needs row */
+.plant-needs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.need {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.icon {
+  color: #2d7a2d;
+}
+
+/* responsive: stack on small screens and center content */
+@media (max-width: 600px) {
+  .plant-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .plant-image {
+    flex: 0 0 auto;
+  }
+
+  .plant-img,
+  .plant-placeholder {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .plant-details {
+    width: 100%;
+    text-align: center;      /* center text when stacked */
+    align-items: center;
+  }
+
+  .plant-needs {
+    justify-content: center;
+  }
+}

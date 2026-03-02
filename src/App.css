@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+header {
+  background-color: #516652;
+  color: white;
+  padding: 15px 20px;
+  margin-bottom: 0; /* ensure header doesn't add extra space */
+}
+
+header nav {
+  display: flex;
+  justify-content: space-evenly; /* distribute nav items evenly across the header */
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;             /* keep links on a single line */
+  width: 100%;
+  max-width: 1100px;             /* optional: control max width of the nav row */
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;    /* make buttons wider */
+  padding: 10px 16px;
+  border-radius: 8px;  /* rounded pill-like buttons */
+  white-space: nowrap; /* prevent text wrap */
+}
+
+footer {
+  background-color: #516652;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px auto; /* changed to center cards horizontally */
+  max-width: 700px; /* optional: keeps cards from stretching too wide */
+}
+
+/* new: center card galleries and allow wrapping */
+.plant-gallery,
+.my-plant-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center cards in the row */
+  gap: 16px;
+  padding: 10px 0;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,54 @@
+/* center title and nicer typography for the MyPlants page */
+.my-plants {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #273038;
+  line-height: 1.5;
+  padding: 20px;
+  background: #f7faf7;
+}
+
+.my-plants__header {
+    background-image: url("../assets/header.jpg");
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.my-plants__header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #badac0;
+  letter-spacing: 0.4px;
+  text-transform: none;
+}
+
+.my-plants__header .toggle-add-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #badac0;
+  color: #3d564c;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .15s ease;
+}
+
+.my-plants__header .toggle-add-btn:hover {
+  background: #25612f;
+}
+
+.my-plants p {
+  color: #4a5560;
+  font-size: 1rem;
+}
+
+/* grid / gallery spacing */
+.my-plant-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center cards */
+  gap: 16px;
+  margin-top: 16px;
+}

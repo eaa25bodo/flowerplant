@@ -1,0 +1,116 @@
+/* About Page Styles (updated layout & alternating backgrounds) */
+
+.about-page {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #333;
+  line-height: 1.7;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section container */
+.about-section {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Row layout: text + image side-by-side */
+.about-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Reverse row (image left, text right) */
+.about-row--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image column: smaller and left/right aligned */
+.about-image {
+  flex: 0 0 160px; /* smaller image */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f4f7f4;
+}
+
+.about-image img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text column */
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin: 0;
+  font-size: 16px;
+  color: #233;
+  text-align: left;
+}
+
+/* Full-width paragraph blocks */
+.about-full {
+  padding: 20px;
+}
+
+.about-full p {
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Alternate background for every second paragraph/section (even sections) */
+.about-section:nth-of-type(even) {
+  background-color: #516652; /* matches header color */
+  color: #fff;
+}
+
+.about-section:nth-of-type(even) .about-text p,
+.about-section:nth-of-type(even) .about-full p {
+  color: #fff;
+}
+
+/* Slight inner padding for rows so even-section text sits nicely */
+.about-section .about-row,
+.about-section .about-full {
+  padding: 16px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .about-row,
+  .about-row--reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+    background: transparent;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .about-text p,
+  .about-full p {
+    text-align: left; /* keep readable on small screens */
+  }
+}
